@@ -1,0 +1,27 @@
+<div class="todos">
+
+    <div class="input">
+        <input
+            type="text"
+            name="inputTodo"
+            placeholder="Enter task details"
+            class="todo-input"
+            [(ngModel)] = "inputTodo"
+        />
+        <input type="submit" value="Add Todo" class="todo-submit" (click)="addTodo()">
+    </div>
+
+    {{ title }}
+    <!-- the for loop is in the div element itself and the loop variable is lowercase of the chosen variable -->
+    <div class="todo {{ (todolist.completed? 'done': '')}}" *ngFor="let todolist of todoList; let i = index;" >
+        <div class="id">
+            {{ i }}
+        </div>
+        <div class="desc" (click)="toggleDone(i)">
+            {{ todolist.content }}
+        </div>
+        <button class="delete" (click)="onRemove(i)">
+            Remove
+        </button>
+    </div>
+</div>

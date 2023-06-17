@@ -1,0 +1,44 @@
+.todos {
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.todo {
+    background-color: white;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.todo:nth-child(odd) {
+    background-color: rgb(240, 238, 238);
+}
+
+.todo.done div{
+    text-decoration: line-through;
+}
+
+.input {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.todo-input {
+    border: 0.2px solid;
+    padding: 3px;
+    height: 40px;
+}
+
+.todo-submit {
+    background-color: palegreen;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    align-self: flex-end;
+}
