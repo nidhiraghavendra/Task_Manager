@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Todo } from './../../models/todo';
+import { Todo } from './../../models/Todo';
 
 @Component({
   selector: 'app-todos',
@@ -48,5 +48,12 @@ export class TodosComponent {
       content:this.inputTodo,
       completed:false
     })
+
+    this.inputTodo = "";
   }
+
+  onChangeSpeech(event:any) {
+    this.inputTodo = event;
+  }
+  
 }

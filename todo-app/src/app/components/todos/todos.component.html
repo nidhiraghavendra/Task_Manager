@@ -8,8 +8,10 @@
             class="todo-input"
             [(ngModel)] = "inputTodo"
         />
+        <app-speech-to-text (testChange)="onChangeSpeech($event)"></app-speech-to-text>
         <input type="submit" value="Add Todo" class="todo-submit" (click)="addTodo()">
     </div>
+
 
     {{ title }}
     <!-- the for loop is in the div element itself and the loop variable is lowercase of the chosen variable -->
